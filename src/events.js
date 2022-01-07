@@ -8,7 +8,7 @@ player.on('connectionError', (queue, error) => {
 
 player.on('trackStart', (queue, track) => {
     if (!client.config.opt.loopMessage && queue.repeatMode !== 0) return;
-    queue.metadata.send(`🎵 Müzik çalmaya başladı: **${track.title}** -> Kanal: **${queue.connection.channel.name}** 🎧`);
+    queue.metadata.send(`🎵 Müzik çalmaya başladı: **${track.title}** | Kanal: **${queue.connection.channel.name}** 🎧`);
 });
 
 player.on('trackAdd', (queue, track) => {
