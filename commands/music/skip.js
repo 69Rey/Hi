@@ -11,6 +11,6 @@ module.exports = {
 
         const success = queue.skip();
 
-        return message.channel.send(success ? `**${queue.current.title}**, İsimli şarkı atlandı. ✅` : `${message.author}, Birşeyler yanlış gitti. ❌`);
+        return message.channel.send(success ? `**${queue.current.title}**, İsimli şarkı atlandı. ✅` : `${message.author}, Bir hata oluştu!`);
     },
 };

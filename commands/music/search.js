@@ -8,14 +8,14 @@ module.exports = {
     voiceChannel: true,
 
     async execute(client, message, args) {
-        if (!args[0]) return message.channel.send(`${message.author}, Lütfen geçerli bir şarkı ismi yazın. ❌`);
+        if (!args[0]) return message.channel.send(`${message.author}, Lütfen bir şarkı ismi yazınız!`);
 
         const res = await player.search(args.join(' '), {
             requestedBy: message.member,
             searchEngine: QueryType.AUTO
         });
 
-        if (!res || !res.tracks.length) return message.channel.send(`${message.author}, Arama sonucu bulunamadı. ❌`);
+        if (!res || !res.tracks.length) return message.channel.send(`${message.author}, Herhangi bir sonuç bulunamadı!`);
 
         const queue = await player.createQueue(message.guild, {
             metadata: message.channel
@@ -28,10 +28,10 @@ module.exports = {
 
         const maxTracks = res.tracks.slice(0, 10);
 
-        embed.setDescription(`${maxTracks.map((track, i) => `**${i + 1}**. ${track.title} | ${track.author}`).join('\n')}\n\nArasından bir şarkı seçin **1** ile **${maxTracks.length}** arasında seçip yaz gönder veya **cancel** yaz ve seçimi iptal et.⬇️`);
+        embed.setDescription(`${maxTracks.map((track, i) => `**${i + 1}**. ${track.title} | ${track.author}`).join('\n')}\n\nArasından bir şarkı seçin **1** ile **${maxTracks.length}** arasından bir sayı seçip yazıp gönder. Eğer iptal etmek istiyorsan **cancel** yaz ve seçimi iptal et.`);
 
         embed.setTimestamp();
-        embed.setFooter('Edited by Umut Bayraktar ❤️', message.author.avatarURL({ dynamic: true }));
+        embed.setFooter('by DarkKnife', message.author.avatarURL({ dynamic: true }));
 
         message.channel.send({ embeds: [embed] });
 
@@ -57,7 +57,7 @@ module.exports = {
                 return message.channel.send(`${message.author}, Ses kanalına katılamıyorum. ❌`);
             }
 
-            await message.channel.send(`Müzik aramanız yükleniyor. 🎧`);
+            await message.channel.send(`Müzik aramanız yükleniyor.`);
 
             queue.addTrack(res.tracks[Number(query.content)-1]);
             if (!queue.playing) await queue.play();
@@ -65,7 +65,7 @@ module.exports = {
         });
 
         collector.on('end', (msg, reason) => {
-            if (reason === 'time') return message.channel.send(`${message.author}, Şarkı arama süresi sona erdi. ❌`);
+            if (reason === 'time') return message.channel.send(`${message.author}, Şarkı arama süresi sona erdi!`);
         });
     },
 };

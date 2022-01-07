@@ -9,13 +9,13 @@ module.exports = {
     execute(client, message) {
         const queue = player.getQueue(message.guild.id);
 
-        if (!queue || !queue.playing) return message.channel.send(`${message.author}, Şuanda çalan bir müzik yok!. ❌`);
+        if (!queue || !queue.playing) return message.channel.send(`${message.author}, Şuanda çalan bir müzik yok!`);
 
         const track = queue.current;
 
         const embed = new MessageEmbed();
 
-        embed.setColor('RED');
+        embed.setColor('PURPLE');
         embed.setThumbnail(track.thumbnail);
         embed.setAuthor(track.title, client.user.displayAvatarURL({ size: 1024, dynamic: true }));
 
@@ -27,7 +27,7 @@ module.exports = {
         embed.setDescription(`Ses **%${queue.volume}**\nSüre **${trackDuration}**\nDöngü Modu **${methods[queue.repeatMode]}**\nMüziği Açan ${track.requestedBy}`);
 
         embed.setTimestamp();
-        embed.setFooter('Edited by Umut Bayraktar ❤️', message.author.avatarURL({ dynamic: true }));
+        embed.setFooter('by DarkKnife', message.author.avatarURL({ dynamic: true }));
 
         const saveButton = new MessageButton();
 

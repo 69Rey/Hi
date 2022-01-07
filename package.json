@@ -1,7 +1,7 @@
 {
   "name": "glitch-v13-music-bot",
   "main": "main.js",
-  "author": "UmutBayraktar",
+  "author": "DarkKnife",
   "description": "Discord.js V13 Uyumlu Umut Bayraktar Youtube Özel GitHubda Paylaşılan Glitch İçin Kullanılması Gereken Müzik Botu Altyapısı!",
   "scripts": {
     "start": "node main.js"

@@ -9,9 +9,9 @@ module.exports = {
     execute(client, message) {
         const queue = player.getQueue(message.guild.id);
 
-        if (!queue || !queue.playing) return message.channel.send(`${message.author}, Şuanda çalan bir müzik yok!. ❌`);
+        if (!queue || !queue.playing) return message.channel.send(`${message.author}, Şuanda çalan herhangi bir müzik yok!`);
 
-        if (!queue.tracks[0]) return message.channel.send(`${message.author}, Geçerli olandan sonra sırada müzik yok. ❌`);
+        if (!queue.tracks[0]) return message.channel.send(`${message.author}, Şuan da çalan şarkıdan sonra sırada herhangi bir şarkı yok!`);
 
         const embed = new MessageEmbed();
         const methods = ['🔁', '🔂'];
@@ -28,7 +28,7 @@ module.exports = {
         embed.setDescription(`Şuanda Çalan: \`${queue.current.title}\`\n\n${tracks.slice(0, 5).join('\n')}\n\n${nextSongs}`);
 
         embed.setTimestamp();
-        embed.setFooter('Edited by Umut Bayraktar ❤️', message.author.avatarURL({ dynamic: true }));
+        embed.setFooter('by DarkKnife', message.author.avatarURL({ dynamic: true }));
 
         message.channel.send({ embeds: [embed] });
     },
