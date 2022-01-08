@@ -16,14 +16,14 @@ module.exports = (client, message) => {
         const roleDJ = message.guild.roles.cache.find(x => x.name === DJ.roleName);
 
         if (!message.member._roles.includes(roleDJ.id)) {
-            return message.channel.send(`${message.author}, Bu komut sadece ${DJ.roleName} rolü olanlar için ayarlanmıştır. ❌`);
+            return message.channel.send(`${message.author}, Bu komut sadece ${DJ.roleName} rolü olanlar için ayarlanmıştır!`);
         }
     }
 
     if (cmd && cmd.voiceChannel) {
-        if (!message.member.voice.channel) return message.channel.send(`${message.author}, Bir ses kanalına bağlı değilsin. ❌`);
+        if (!message.member.voice.channel) return message.channel.send(`${message.author}, Herhangi bir ses kanalında değilsiniz!`);
 
-        if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`${message.author}, Benim ile aynı ses kanalında değilsiniz. ❌`);
+        if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`${message.author}, Bot ile aynı kanalda değilsiniz!`);
     }
 
     if (cmd) cmd.execute(client, message, args);
