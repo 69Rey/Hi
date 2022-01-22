@@ -1,11 +1,11 @@
 module.exports = {
-  px: "!",
+  px: "-",
   playing: "",
 
   opt: {
     DJ: {
       enabled: false, //EĞER SADECE DJLER KULLANA BİLSİN İSTİYOR İSENİZ false yazanı true yapın.
-      roleName: "DJ", //DJ ROLÜNÜN İSMİ NE OLACAK İSE YAZIN SUNUCUNUZDA O ROLDEKİLER KULLANA BİLİR
+      roleName: "", //DJ ROLÜNÜN İSMİ NE OLACAK İSE YAZIN SUNUCUNUZDA O ROLDEKİLER KULLANA BİLİR
       commands: [
         "back",
         "clear",
@@ -18,7 +18,7 @@ module.exports = {
         "volume",
       ], //DOKUNMA
     },
-    maxVol: 200, //maximum ses seviyesi kaç olacak belirte bilirsiniz.
+    maxVol: 500, //maximum ses seviyesi kaç olacak belirte bilirsiniz.
     loopMessage: false, //elleme
     discordPlayer: {
       ytdlOptions: {

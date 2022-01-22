@@ -14,11 +14,11 @@ module.exports = {
 
         const commands = client.commands.filter(x => x.showHelp !== false);
 
-        embed.setDescription('Lofty Müzik Botunun Komutları');
+        embed.setDescription('Hurric Müzik Botunun Komutları');
         embed.addField(`Botta Mevcut Olan Komut Sayısı - ${commands.size}`, commands.map(x => `\`${x.name}${x.aliases[0] ? ` (${x.aliases.map(y => y).join(', ')})\`` : '\`'}`).join(' | '));
 
         embed.setTimestamp();
-        embed.setFooter('Müzik Botu Komutları - by DarkKnife', message.author.avatarURL({ dynamic: true }));
+        embed.setFooter('Müzik Botu Komutları', message.author.avatarURL({ dynamic: true }));
 
         message.channel.send({ embeds: [embed] });
     },
