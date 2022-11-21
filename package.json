@@ -2,7 +2,7 @@
   "name": "glitch-v13-music-bot",
   "main": "main.js",
   "author": "DarkKnife",
-  "description": "DarkKnife v13 müzik botu.",
+  "description": "Kopis V1 Müzik Botu.",
   "scripts": {
     "start": "node main.js"
   },

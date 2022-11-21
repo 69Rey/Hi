@@ -9,12 +9,12 @@ module.exports = {
     execute(client, message, args) {
         const embed = new MessageEmbed();
 
-        embed.setColor('PURPLE');
+        embed.setColor('BLUE');
         embed.setAuthor(client.user.username, client.user.displayAvatarURL({ size: 1024, dynamic: true }));
 
         const commands = client.commands.filter(x => x.showHelp !== false);
 
-        embed.setDescription('Hurric Müzik Botunun Komutları');
+        embed.setDescription('Kopis Müzik Botunun Komutları');
         embed.addField(`Botta Mevcut Olan Komut Sayısı - ${commands.size}`, commands.map(x => `\`${x.name}${x.aliases[0] ? ` (${x.aliases.map(y => y).join(', ')})\`` : '\`'}`).join(' | '));
 
         embed.setTimestamp();
