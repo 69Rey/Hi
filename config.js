@@ -1,5 +1,5 @@
 module.exports = {
-  px: "-",
+  px: "!",
   playing: "",
 
   opt: {
