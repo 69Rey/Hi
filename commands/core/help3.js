@@ -31,7 +31,8 @@ module.exports = {
 
 > **» R!nasıl :** İssei Nasılım
 > **» R!kiss :** Mmmm Benim Küçük İsseim...
-
+> **» R!devil :** İssei ben mi O mu
+> **» R!soyun :** Mhmhmmm...
 
 **▬▬▬▬▬▬▬[** :gear:  **Bilgilendirme**  :gear: **]▬▬▬▬▬▬**
 
