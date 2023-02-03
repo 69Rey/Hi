@@ -1,27 +1,41 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 
-exports.run = (client, message) => {
-  const EmbedNarcosCode = new Discord.MessageEmbed()
+module.exports = {
+  name: "yardim",
+  aliases: ["ye", "help", "c"],
+  showHelp: false,
+  utilisation: "{prefix}help",
 
-    .setColor("RANDOM")
-    .setTitle(
-      "**▬▬▬▬▬▬[** ©️ **» Akeno Bot** ©️ **]▬▬▬▬▬▬**  **  **Prefixim: `UWU!`"
+  execute(client, message, args) {
+    const embed = new MessageEmbed();
+
+    embed.setColor("BLUE");
+    embed.setAuthor(
+      client.user.username,
+      client.user.displayAvatarURL({ size: 1024, dynamic: true })
+    );
+
+    const commands = client.commands.filter((x) => x.showHelp !== false);
+
+    embed.setColor("RANDOM")
+    embed.setTitle(
+      "**▬▬▬▬▬▬[** ©️ **» Rias Bot** ©️ **]▬▬▬▬▬▬**  **  **Prefixim: `R!`"
     )
-    .setThumbnail(
-      "https://media.tenor.com/Q3hXgsRIcswAAAAM/akeno-himejima.gif"
+    embed.setThumbnail(
+      "https://pandatoryu.files.wordpress.com/2013/03/highschool-dxd-gif-de-neogohann-visite-pandatoryu.gif"
     )
-    .setDescription(
+    embed.setDescription(
       `
 
 **▬▬▬▬▬▬▬[** :closed_lock_with_key:  **Komut Listesi**   :closed_lock_with_key: **]▬▬▬▬▬▬**
 
-> **» UWU!moderasyon :** Moderasyon komudları görüntüler.
-> **» UWU!kullanıcı :** Userler için açık komudlar...
-> **» UWU!eğlence :** Sizi biraz eğlendirir.
-> **» UWU!eğlence2 :** size güzel komudlarımı göstereyim sizi eğlendirecek...
-> **» UWU!logo :** İstediniz şekillerde bi logo oluşturabilirsiniz...
-> **» UWU!logo2 :**logo2 kamutlarıyla sizlerle...
-> **» UWU!akenoyardim :**logo2 Bota Özel komutlar...
+> **» R!oynat :** Müziği Oynatır.
+> **» R!devam :** Müziği Devam ettirir...
+> **» R!geç :** Müziği Geçer.
+> **» R!dur :** Müziği Durdurur...
+> **» R!ses :** Sesi Ayarlar...
+> **» R!kaydet :** Parça Listesine Kaydeder ...
+> **» R!çalan :** Çalan Müziği Gösterir...
 
 **▬▬▬▬▬▬▬[** :gear:  **Bilgilendirme**  :gear: **]▬▬▬▬▬▬**
 
@@ -35,20 +49,15 @@ exports.run = (client, message) => {
 `
     )
 
-    .setFooter(client.user.username + "", client.user.avatarURL)
-    .setTimestamp();
+    embed.setFooter(client.user.username + "", client.user.avatarURL)
+    embed.setTimestamp();
 
-  return message.channel.send(EmbedNarcosCode).then;
-};
-exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 0
-};
+    embed.setTimestamp();
+    embed.setFooter(
+      "Müzik Botu Komutları",
+      message.author.avatarURL({ dynamic: true })
+    );
 
-exports.help = {
-  name: "yardım",
-  description: "Botun Komut Listesini Gösterir!",
-  usage: "UWU!yardım"
+    message.channel.send({ embeds: [embed] });
+  },
 };
