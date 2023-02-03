@@ -1,8 +1,8 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-  name: "yardım",
-  aliases: ["ye", "yardım", "c"],
+  name: "rias-yardım",
+  aliases: ["rias-yardım"],
   showHelp: false,
   utilisation: "{prefix}help",
 
@@ -29,8 +29,8 @@ module.exports = {
 
 **▬▬▬▬▬▬▬[** :closed_lock_with_key:  **Komut Listesi**   :closed_lock_with_key: **]▬▬▬▬▬▬**
 
-> **» R!müzik-yardım :** Müzik Komutları
-> **» R!rias-yardım :** Rias'ın Özel Komutları ...
+> **» R!nasıl :** İssei Nasılım
+> **» R!kiss :** Mmmm Benim Küçük İsseim...
 
 
 **▬▬▬▬▬▬▬[** :gear:  **Bilgilendirme**  :gear: **]▬▬▬▬▬▬**
