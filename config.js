@@ -1,5 +1,6 @@
+
 module.exports = {
-  px: "!",
+  prefix: "R!",
   playing: "",
 
   opt: {

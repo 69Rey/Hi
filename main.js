@@ -18,6 +18,7 @@ global.player = new Player(global.client, global.client.config.opt.discordPlayer
 require('./src/loader');
 require('./src/events');
 
+
 const express = require("express");
 const app = express();
 const http = require("http");
