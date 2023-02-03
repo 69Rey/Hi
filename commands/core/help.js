@@ -1,8 +1,8 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-  name: "help",
-  aliases: ["h", "yardım", "y"],
+  name: "yardım",
+  aliases: ["ye", "yardım", "c"],
   showHelp: false,
   utilisation: "{prefix}help",
 
@@ -17,18 +17,41 @@ module.exports = {
 
     const commands = client.commands.filter((x) => x.showHelp !== false);
 
-    embed.setDescription("Kopis Müzik Botunun Komutları");
-    embed.addField(
-      `Botta Mevcut Olan Komut Sayısı - ${commands.size}`,
-      commands
-        .map(
-          (x) =>
-            `\`${x.name}${
-              x.aliases[0] ? ` (${x.aliases.map((y) => y).join(", ")})\`` : "`"
-            }`
-        )
-        .join(" | ")
-    );
+    embed.setColor("RANDOM")
+    embed.setTitle(
+      "**▬▬▬▬▬▬[** ©️ **» Rias Bot** ©️ **]▬▬▬▬▬▬**  **  **Prefixim: `R!`"
+    )
+    embed.setThumbnail(
+      "https://pandatoryu.files.wordpress.com/2013/03/highschool-dxd-gif-de-neogohann-visite-pandatoryu.gif"
+    )
+    embed.setDescription(
+      `
+
+**▬▬▬▬▬▬▬[** :closed_lock_with_key:  **Komut Listesi**   :closed_lock_with_key: **]▬▬▬▬▬▬**
+
+> **» R!başlat :** Müziği Oynatır.
+> **» R!devam :** Müziği Devam ettirir...
+> **» R!geç :** Müziği Geçer.
+> **» R!kapat :** Müziği Durdurur...
+> **» R!ses :** Sesi Ayarlar...
+> **» R!kaydet :** Parça Listesine Kaydeder ...
+> **» R!çalan :** Çalan Müziği Gösterir...
+> **» R!döngü :** Döngüye Alır...
+
+**▬▬▬▬▬▬▬[** :gear:  **Bilgilendirme**  :gear: **]▬▬▬▬▬▬**
+
+> :dizzy: **Fikirleriniz** **değerlidir, Belirtmekten asla çekinmeyin!**
+> :open_file_folder: **Rias Botu Flickr tarafından tasarlanmış daha sonra geliştirilmiş Eğlence botudur()**
+> :round_pushpin: **Komut hakkında detaylı bilgi için: R!yardım**
+> :bulb: **Discord Js Sürümü: 12.4.0 **
+
+**» Bağlantılar** 
+**[Destek Sunucusu](https://discord.gg/JHMXGETfVX)** **•** **[Botun Davet Linki](https://discord.com/oauth2/authorize?client_id=1063207275449307197&scope=bot&permissions=8)** **•** **[Web-Site]( )**
+`
+    )
+
+    embed.setFooter(client.user.username + "", client.user.avatarURL)
+    embed.setTimestamp();
 
     embed.setTimestamp();
     embed.setFooter(

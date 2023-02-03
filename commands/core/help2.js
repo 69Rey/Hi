@@ -29,23 +29,24 @@ module.exports = {
 
 **▬▬▬▬▬▬▬[** :closed_lock_with_key:  **Komut Listesi**   :closed_lock_with_key: **]▬▬▬▬▬▬**
 
-> **» R!oynat :** Müziği Oynatır.
+> **» R!başlat :** Müziği Oynatır.
 > **» R!devam :** Müziği Devam ettirir...
 > **» R!geç :** Müziği Geçer.
-> **» R!dur :** Müziği Durdurur...
+> **» R!kapat :** Müziği Durdurur...
 > **» R!ses :** Sesi Ayarlar...
 > **» R!kaydet :** Parça Listesine Kaydeder ...
 > **» R!çalan :** Çalan Müziği Gösterir...
+> **» R!döngü :** Döngüye Alır...
 
 **▬▬▬▬▬▬▬[** :gear:  **Bilgilendirme**  :gear: **]▬▬▬▬▬▬**
 
 > :dizzy: **Fikirleriniz** **değerlidir, Belirtmekten asla çekinmeyin!**
-> :open_file_folder: **Akeno Botu Flickr tarafından tasarlanmış daha sonra geliştirilmiş Eğlence botudur()**
-> :round_pushpin: **Komut hakkında detaylı bilgi için: UWU!yardım**
+> :open_file_folder: **Rias Botu Flickr tarafından tasarlanmış daha sonra geliştirilmiş Eğlence botudur()**
+> :round_pushpin: **Komut hakkında detaylı bilgi için: R!yardım**
 > :bulb: **Discord Js Sürümü: 12.4.0 **
 
 **» Bağlantılar** 
-**[Destek Sunucusu](https://discord.gg/JHMXGETfVX)** **•** **[Botun Davet Linki](https://discord.com/oauth2/authorize?client_id=1050070635906351275&scope=bot&permissions=8)** **•** **[Web-Site]( )**
+**[Destek Sunucusu](https://discord.gg/JHMXGETfVX)** **•** **[Botun Davet Linki](https://discord.com/oauth2/authorize?client_id=1063207275449307197&scope=bot&permissions=8)** **•** **[Web-Site]( )**
 `
     )
 
